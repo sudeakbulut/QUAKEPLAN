@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Kritik Yapılar Listesi - Depremde ayakta kalması gereken hayati bina ve altyapılar</title>
+
+  <link href="./main.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header fixed-footer">
+    <div class="app-header header-shadow">
+      <div class="app-header__logo">
+        <div class="logo-src"></div>
+        <div class="header__pane ml-auto">
+          <div>
+            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-header__mobile-menu">
+        <div>
+          <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="app-header__menu">
+        <span>
+          <button type="button" class="btn-icon btn-icon-only btn btn-info btn-sm mobile-toggle-header-nav">
+            <span class="btn-icon-wrapper">
+              <i class="fa fa-ellipsis-v fa-w-6"></i>
+            </span>
+          </button>
+        </span>
+      </div>
+
+      <div class="app-header__content">
+        <div class="app-header-left">
+          <div class="search-wrapper">
+            <div class="input-holder">
+              <input type="text" class="search-input" placeholder="Type to search">
+              <button class="search-icon"><span></span></button>
+            </div>
+            <button class="close"></button>
+          </div>
+          <ul class="header-menu nav">
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-database"> </i>
+                İstatislikler
+              </a>
+            </li>
+            <li class="btn-group nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-edit"></i>
+                Proje Yapıları
+              </a>
+            </li>
+            <li class="dropdown nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-cog"></i>
+                Ayarlar
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="app-header-right">
+          <div class="header-btn-lg pr-0">
+            <div class="widget-content p-0">
+              <div class="widget-content-wrapper">
+                <div class="widget-content-left">
+                  <div class="btn-group">
+                    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                      <img width="42" class="rounded-circle" src="https://i.pinimg.com/736x/53/c8/f4/53c8f464c1aab5a4b66c7c2164936e66.jpg" alt="">
+                      <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                    </a>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                      <button type="button" tabindex="0" class="dropdown-item">Kullanıcı Hesabı</button>
+                      <button type="button" tabindex="0" class="dropdown-item">Ayarlar</button>
+                      <h6 tabindex="-1" class="dropdown-header">Header</h6>
+                      <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                      <div tabindex="-1" class="dropdown-divider"></div>
+                      <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget-content-left  ml-3 header-user-info">
+                  <div class="widget-heading">
+                    Giriş
+                  </div>
+                </div>
+                <div class="widget-content-right header-user-info ml-3">
+                  <button type="button" class="btn-shadow p-1 btn btn-info btn-sm show-toastr-example">
+                    <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-main">
+      <div class="app-sidebar sidebar-shadow">
+        <div class="app-header__logo">
+          <div class="logo-src"></div>
+          <div class="header__pane ml-auto">
+            <div>
+              <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="app-header__mobile-menu">
+          <div>
+            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="app-header__menu">
+          <span>
+            <button type="button" class="btn-icon btn-icon-only btn btn-info btn-sm mobile-toggle-header-nav">
+              <span class="btn-icon-wrapper">
+                <i class="fa fa-ellipsis-v fa-w-6"></i>
+              </span>
+            </button>
+          </span>
+        </div>
+        <div class="scrollbar-sidebar">
+          <div class="app-sidebar__inner">
+            <ul class="vertical-nav-menu">
+              <li class="app-sidebar__heading">Ana Panel</li>
+              <li>
+                <a href="anasayfa.html" class="mm-active">
+                  <i class="metismenu-icon pe-7s-rocket"></i>
+                  Güncel Haberler
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Risk Verileri</li>
+              
+              <li>
+                <a href="tables-regular.html">
+                  <i class="metismenu-icon pe-7s-display2"></i>
+                  Kritik Yapılar Listesi
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Harita Görünümü</li>
+              <li>
+                <a href="dashboard-boxes.html">
+                  <i class="metismenu-icon pe-7s-display2"></i>
+                  Şehir Bazlı Görüntüleme
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Raporlar</li>
+              <li>
+                <a href="forms-controls.html">
+                  <i class="metismenu-icon pe-7s-mouse">
+                  </i>Yıllık Özet
+                </a>
+              </li>
+              <li>
+                <a href="forms-layouts.html">
+                  <i class="metismenu-icon pe-7s-eyedropper">
+                  </i>Risk puanı çıktısı
+                </a>
+              </li>
+              
+              <li class="app-sidebar__heading">Deprem Grafikleri</li>
+              <li>
+                <a href="charts-chartjs.html">
+                  <i class="metismenu-icon pe-7s-graph2">
+                  </i>Grafikler
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="app-main__outer">
+        <div class="app-main__inner">
+          <div class="app-page-title">
+            <div class="page-title-wrapper">
+              <div class="page-title-heading">
+                <div class="page-title-icon">
+                  <i class="pe-7s-drawer icon-gradient bg-happy-itmeo">
+                  </i>
+                </div>
+                <div>Kritik Yapılar Listesi
+                  <div class="page-title-subheading">Depremde ayakta kalması gereken hayati bina ve altyapılar
+                  </div>
+                </div>
+              </div>
+              <div class="page-title-actions">
+                <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom"
+                  class="btn-shadow mr-3 btn btn-focus">
+                  <i class="fa fa-star"></i>
+                </button>
+                <div class="d-inline-block dropdown">
+                  <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    class="btn-shadow dropdown-toggle btn btn-info">
+                    <span class="btn-icon-wrapper pr-2 opacity-7">
+                      <i class="fa fa-business-time fa-w-20"></i>
+                    </span>
+                    Buttons
+                  </button>
+                  <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-inbox"></i>
+                          <span>
+                            Inbox
+                          </span>
+                          <div class="ml-auto badge badge-pill badge-secondary">86</div>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-book"></i>
+                          <span>
+                            Book
+                          </span>
+                          <div class="ml-auto badge badge-pill badge-danger">5</div>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-picture"></i>
+                          <span>
+                            Picture
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a disabled href="javascript:void(0);" class="nav-link disabled">
+                          <i class="nav-link-icon lnr-file-empty"></i>
+                          <span>
+                            File Disabled
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+    <div class="col-lg-6">
+        <div class="main-card mb-3 card">
+            <div class="card-body">
+                <h5 class="card-title">Kritik Yapı Kategorileri ve Örnekleri</h5>
+                <table class="mb-0 table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Yapı Kategorisi</th>
+                            <th>Örnekler</th>
+                            <th>Önemi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Acil Servis ve Sağlık Yapıları</td>
+                            <td>Hastaneler, acil servisler, poliklinikler, sağlık ocakları, eczaneler</td>
+                            <td>Afet anında ilk müdahale ve tedavi merkezleri olmaları</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Eğitim Yapıları</td>
+                            <td>Okullar, üniversiteler, yurtlar</td>
+                            <td>Yoğun insan popülasyonu içermeleri ve potansiyel toplanma alanları olmaları</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Ulaşım ve Lojistik Altyapısı</td>
+                            <td>Köprüler, viyadükler, tüneller, havaalanları, limanlar, demiryolları, otobüs terminalleri</td>
+                            <td>Kurtarma ekiplerinin ulaşımını ve yardımların dağıtımını sağlamaları</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Enerji ve Altyapı Tesisleri</td>
+                            <td>Elektrik santralleri, doğalgaz hatları, petrol boru hatları, rafineriler, su arıtma tesisleri, barajlar, kanalizasyon sistemleri</td>
+                            <td>Toplumun temel yaşam ihtiyaçlarını karşılamaları ve yıkımlarının büyük çevresel felaketlere yol açabilmesi</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>İletişim Yapıları</td>
+                            <td>Telekomünikasyon merkezleri, baz istasyonları, televizyon ve radyo vericileri</td>
+                            <td>Afet anında iletişimin kesintisiz devam etmesi için hayati olmaları.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Yönetim ve Güvenlik Yapıları</td>
+                            <td>Valilikler, kaymakamlıklar, belediye binaları, emniyet müdürlükleri, itfaiye binaları, adliyeler</td>
+                            <td>Afet yönetimi ve koordinasyonunun merkezleri olmaları</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>Sanayi Tesisleri (Özel Risk Grupları)</td>
+                            <td>Kimyasal madde depolayan tesisler, nükleer santraller (varsa), tehlikeli atık tesisleri</td>
+                            <td>Patlama, yangın veya kimyasal sızıntı gibi ikincil afet riskleri taşımaları</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="main-card mb-3 card">
+            <div class="card-body">
+                <h5 class="card-title">Kritik Yapıların Deprem Güvenliği</h5>
+                <table class="mb-0 table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Özellik / Konu Başlığı</th>
+                            <th>Açıklama</th>
+                            <th>Neden Kritik?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Özel Mevzuat</td>
+                            <td>Türkiye Bina Deprem Yönetmeliği'nde (TBDY) daha sıkı tasarım ve yapı kurallarına tabidirler.</td>
+                            <td>Yıkılmaları halinde can kaybı artar, kurtarma ve yardım aksar.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Tasarım Standartları</td>
+                            <td>Normal binalara göre daha yüksek performans hedefleri (kesintisiz işlevsellik) belirlenir.</td>
+                            <td>Afet sonrası müdahale ve yaşamın devamı için hayati öneme sahiptirler.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Zemin Etüdü</td>
+                            <td>Detaylı ve kapsamlı zemin araştırmaları yapılır; zeminin deprem davranışına özel çözümler üretilir.</td>
+                            <td>Kötü zemin, deprem etkisini artırır, bu yapılar için ekstra risk oluşturur.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Malzeme Kalitesi</td>
+                            <td>Yapısal elemanlarda kullanılan beton ve çelik gibi malzemelerin kalitesi titizlikle denetlenir.</td>
+                            <td>Yüksek dayanım ve süneklik, depremde yapısal bütünlüğü korumak için esastır.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Güçlendirme Projeleri</td>
+                            <td>Eski kritik yapılar, güncel yönetmeliklere uygun hale getirilmek için güçlendirme çalışmalarından geçer.</td>
+                            <td>Mevcut riskli yapı stoğunu güvenli hale getirerek gelecekteki kayıpları azaltır.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Yapı Denetimi</td>
+                            <td>İnşaatın her aşaması, alanında uzman mühendisler ve yetkili kurumlarca sürekli ve sıkı denetlenir.</td>
+                            <td>Projeye ve yönetmeliğe uygunluk, yapı güvenliğinin temel güvencesidir.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>Kentsel Dönüşüm</td>
+                            <td>Riskli kritik yapılar, depreme dayanıklı, yeni ve güvenli yapılarla değiştirilir.</td>
+                            <td>Toplumsal direnci artırır, afet sonrası toparlanmayı hızlandırır.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+  <script type="text/javascript" src="./assets/scripts/main.js"></script>
+
+</body>
+
+</html>

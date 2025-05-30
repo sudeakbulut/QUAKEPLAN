@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Yıllık Özet </title>
+
+  <link href="./main.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header fixed-footer">
+    <div class="app-header header-shadow">
+      <div class="app-header__logo">
+        <div class="logo-src"></div>
+        <div class="header__pane ml-auto">
+          <div>
+            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-header__mobile-menu">
+        <div>
+          <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="app-header__menu">
+        <span>
+          <button type="button" class="btn-icon btn-icon-only btn btn-info btn-sm mobile-toggle-header-nav">
+            <span class="btn-icon-wrapper">
+              <i class="fa fa-ellipsis-v fa-w-6"></i>
+            </span>
+          </button>
+        </span>
+      </div>
+
+      <div class="app-header__content">
+        <div class="app-header-left">
+          <div class="search-wrapper">
+            <div class="input-holder">
+              <input type="text" class="search-input" placeholder="Type to search">
+              <button class="search-icon"><span></span></button>
+            </div>
+            <button class="close"></button>
+          </div>
+          <ul class="header-menu nav">
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-database"> </i>
+                İstatislikler
+              </a>
+            </li>
+            <li class="btn-group nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-edit"></i>
+                Proje Yapıları
+              </a>
+            </li>
+            <li class="dropdown nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-cog"></i>
+                Ayarlar
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="app-header-right">
+          <div class="header-btn-lg pr-0">
+            <div class="widget-content p-0">
+              <div class="widget-content-wrapper">
+                <div class="widget-content-left">
+                  <div class="btn-group">
+                    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                      <img width="42" class="rounded-circle" src="https://i.pinimg.com/736x/53/c8/f4/53c8f464c1aab5a4b66c7c2164936e66.jpg" alt="">
+                      <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                    </a>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                      <button type="button" tabindex="0" class="dropdown-item">KUllanıcı Hesabı</button>
+                      <button type="button" tabindex="0" class="dropdown-item">Ayarlar</button>
+                      <h6 tabindex="-1" class="dropdown-header">Header</h6>
+                      <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                      <div tabindex="-1" class="dropdown-divider"></div>
+                      <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget-content-left  ml-3 header-user-info">
+                  <div class="widget-heading">
+                    Giriş
+                  </div>
+                </div>
+                <div class="widget-content-right header-user-info ml-3">
+                  <button type="button" class="btn-shadow p-1 btn btn-info btn-sm show-toastr-example">
+                    <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-main">
+      <div class="app-sidebar sidebar-shadow">
+        <div class="app-header__logo">
+          <div class="logo-src"></div>
+          <div class="header__pane ml-auto">
+            <div>
+              <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="app-header__mobile-menu">
+          <div>
+            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="app-header__menu">
+          <span>
+            <button type="button" class="btn-icon btn-icon-only btn btn-info btn-sm mobile-toggle-header-nav">
+              <span class="btn-icon-wrapper">
+                <i class="fa fa-ellipsis-v fa-w-6"></i>
+              </span>
+            </button>
+          </span>
+        </div>
+        <div class="scrollbar-sidebar">
+          <div class="app-sidebar__inner">
+            <ul class="vertical-nav-menu">
+              <li class="app-sidebar__heading">Ana Panel</li>
+              <li>
+                <a href="anasayfa.html" class="mm-active">
+                  <i class="metismenu-icon pe-7s-rocket"></i>
+                  Güncel Haberler
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Risk Verileri</li>
+          
+              <li>
+                <a href="tables-regular.html">
+                  <i class="metismenu-icon pe-7s-display2"></i>
+                  Kritik Yapılar Listesi
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Harita Görünümü</li>
+              <li>
+                <a href="dashboard-boxes.html">
+                  <i class="metismenu-icon pe-7s-display2"></i>
+                  Şehir Bazlı Görüntüleme
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Raporlar</li>
+              <li>
+                <a href="forms-controls.html">
+                  <i class="metismenu-icon pe-7s-mouse">
+                  </i>Yıllık Özet
+                </a>
+              </li>
+              <li>
+                <a href="forms-layouts.html">
+                  <i class="metismenu-icon pe-7s-eyedropper">
+                  </i>Risk puanı çıktısı
+                </a>
+              </li>
+              
+              <li class="app-sidebar__heading">Deprem Grafikleri</li>
+              <li>
+                <a href="charts-chartjs.html">
+                  <i class="metismenu-icon pe-7s-graph2">
+                  </i>Grafikler
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="app-main__outer">
+        <div class="app-main__inner">
+          <div class="app-page-title">
+            <div class="page-title-wrapper">
+              <div class="page-title-heading">
+                <div class="page-title-icon">
+                  <i class="pe-7s-display1 icon-gradient bg-premium-dark">
+                  </i>
+                </div>
+                <div>Yıllık Özet
+                  <div class="page-title-subheading">
+                  </div>
+                </div>
+              </div>
+              <div class="page-title-actions">
+                <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom"
+                  class="btn-shadow mr-3 btn btn-focus">
+                  <i class="fa fa-star"></i>
+                </button>
+                <div class="d-inline-block dropdown">
+                  <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    class="btn-shadow dropdown-toggle btn btn-info">
+                    <span class="btn-icon-wrapper pr-2 opacity-7">
+                      <i class="fa fa-business-time fa-w-20"></i>
+                    </span>
+                    Buttons
+                  </button>
+                  <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-inbox"></i>
+                          <span>
+                            Inbox
+                          </span>
+                          <div class="ml-auto badge badge-pill badge-secondary">86</div>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-book"></i>
+                          <span>
+                            Book
+                          </span>
+                          <div class="ml-auto badge badge-pill badge-danger">5</div>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-picture"></i>
+                          <span>
+                            Picture
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a disabled href="javascript:void(0);" class="nav-link disabled">
+                          <i class="nav-link-icon lnr-file-empty"></i>
+                          <span>
+                            File Disabled
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Önemli Depremlerin Detayları</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        .timeline-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .timeline-year {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-right: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+        .timeline-year:hover {
+            background-color: #007bff;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .timeline-year.active {
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+        }
+        .earthquake-list {
+            margin-top: 20px;
+        }
+        .earthquake-item {
+            border-bottom: 1px dashed #ced4da;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .earthquake-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .earthquake-item strong {
+            color: #343a40;
+        }
+        .map-container {
+            width: 100%;
+            height: 300px; /* Harita yüksekliği */
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            display: flex; /* Resmi ortalamak için */
+            justify-content: center; /* Resmi yatayda ortala */
+            align-items: center; /* Resmi dikeyde ortala */
+            overflow: hidden; /* Resim kapsayıcıdan taşarsa gizle */
+            margin-top: 20px;
+        }
+        .map-container img {
+            max-width: 100%; /* Resmin kapsayıcıdan büyük olmamasını sağlar */
+            max-height: 100%; /* Resmin kapsayıcıdan büyük olmamasını sağlar */
+            object-fit: contain; /* Resmi orantılı bir şekilde kapsayıcıya sığdırır */
+        }
+        /* Deprem büyüklüklerine göre renkler (örnek) */
+        .magnitude-small { color: #28a745; } /* Yeşil */
+        .magnitude-medium { color: #ffc107; } /* Sarı */
+        .magnitude-large { color: #dc3545; } /* Kırmızı */
+
+    </style>
+</head>
+<body>
+
+    <div class="container main-content">
+        <div class="card">
+            <div class="card-header">
+                Yıllık Deprem Özeti
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Önemli Depremlerin Detayları</h5>
+                <p class="card-text">Her yıl yaşanan en büyük veya en yıkıcı depremler hakkında kısa bilgiler sunulmaktadır.</p>
+
+                <div class="timeline-container" id="timelineContainer">
+                    </div>
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <h6><strong id="selectedYearTitle"></strong> Yılı Depremleri</h6>
+                        <div class="earthquake-list" id="earthquakeList">
+                            </div>
+                    </div>
+                    <div class="col-md-5">
+                        <h6>Türkiye Haritası</h6>
+                        <div class="map-container" id="turkeyMap">
+                            Yükleniyor...
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Deprem Verileri (Gerçek bir uygulamada bir API'den gelecektir)
+        const earthquakeData = {
+            2023: [
+                { date: '06 Şubat 2023', magnitude: 7.8, epicenter: 'Kahramanmaraş, Pazarcık', casualties: '50.000+ Can Kaybı, Büyük Yıkım', details: 'Türkiye ve Suriye\'yi etkileyen çok büyük bir deprem. Binlerce bina yıkıldı.' },
+                { date: '06 Şubat 2023', magnitude: 7.6, epicenter: 'Kahramanmaraş, Elbistan', casualties: 'Bu deprem de büyük yıkıma neden oldu.', details: 'Aynı gün içinde yaşanan artçı deprem.' },
+                { date: '20 Şubat 2023', magnitude: 6.4, epicenter: 'Hatay, Defne', casualties: 'Can Kaybı ve Hasar', details: 'Hatay\'da yıkımı artırdı.' }
+            ],
+            2022: [
+                { date: '23 Kasım 2022', magnitude: 5.9, epicenter: 'Düzce, Gölyaka', casualties: 'Yaralılar, Orta Hasar', details: 'Düzce ve çevre illerde hissedildi.' },
+                { date: '04 Ağustos 2022', magnitude: 5.1, epicenter: 'Muğla, Datça', casualties: 'Hafif hasar', details: 'Akdeniz açıklarında meydana geldi.' }
+            ],
+            2020: [
+                { date: '30 Ekim 2020', magnitude: 6.9, epicenter: 'İzmir, Seferihisar', casualties: '117 Can Kaybı, Yüzlerce Yaralı, Yıkım', details: 'Ege Denizi\'nde meydana geldi ve İzmir\'de büyük yıkıma yol açtı.' },
+                { date: '24 Ocak 2020', magnitude: 6.8, epicenter: 'Elazığ, Sivrice', casualties: '41 Can Kaybı, 1600+ Yaralı', details: 'Elazığ ve Malatya\'da hissedildi.' }
+            ],
+            2011: [
+                { date: '23 Ekim 2011', magnitude: 7.2, epicenter: 'Van, Tabanlı', casualties: '604 Can Kaybı, Binlerce Yaralı, Büyük Yıkım', details: 'Van ve Erciş\'i etkiledi.' },
+                { date: '09 Kasım 2011', magnitude: 5.6, epicenter: 'Van, Edremit', casualties: '40 Can Kaybı', details: 'Büyük Van depreminin ardından yaşanan artçı deprem.' }
+            ],
+            1999: [
+                { date: '17 Ağustos 1999', magnitude: 7.6, epicenter: 'Kocaeli, Gölcük', casualties: '17.000+ Can Kaybı, 40.000+ Yaralı, Büyük Yıkım', details: 'Marmara Bölgesi\'nde büyük yıkıma yol açtı.' },
+                { date: '12 Kasım 1999', magnitude: 7.2, epicenter: 'Düzce', casualties: '845 Can Kaybı, Binlerce Yaralı', details: 'Gölcük depreminin ardından kısa süre sonra yaşandı.' }
+            ]
+        };
+
+        // Her yıl için harita resimlerinin URL'leri
+        const yearMapImages = {
+            2023: "https://e-haberajansi.com/uploads/2023/02/06/231433_son_deprem-gaziantep-kahramanmaras.jpg",
+            2022: "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1954000/duzce-golyaka-1954025.jpg", // Örnek 2022 resmi
+            2020: "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1436000/1437857.jpg", // Örnek 2020 resmi
+            2011: "https://web.itu.edu.tr/~eedmi/Van2011Eq/figures/VanM7p2_EpicentralDist_tr.png", // Örnek 2011 resmi
+            1999: "https://upload.wikimedia.org/wikipedia/commons/8/8c/1999_%C4%B0zmit_earthquake_map.svg" // Örnek 1999 resmi
+            // Diğer yıllar için buraya URL ekleyebilirsiniz
+        };
+
+        const timelineContainer = document.getElementById('timelineContainer');
+        const earthquakeList = document.getElementById('earthquakeList');
+        const selectedYearTitle = document.getElementById('selectedYearTitle');
+        const turkeyMap = document.getElementById('turkeyMap');
+
+        let currentYear = 2023; // Varsayılan olarak gösterilecek yıl
+
+        // Yılları zaman çizelgesine ekle
+        function populateTimeline() {
+            const years = Object.keys(earthquakeData).sort((a, b) => b - a); // Yılları azalan sırada sırala
+            timelineContainer.innerHTML = ''; // Önceki içeriği temizle
+            years.forEach(year => {
+                const yearElement = document.createElement('span');
+                yearElement.classList.add('timeline-year');
+                yearElement.textContent = year;
+                yearElement.dataset.year = year;
+                if (parseInt(year) === currentYear) {
+                    yearElement.classList.add('active');
+                }
+                yearElement.addEventListener('click', () => {
+                    selectYear(parseInt(year));
+                });
+                timelineContainer.appendChild(yearElement);
+            });
+        }
+
+        // Yıl seçildiğinde içeriği güncelle
+        function selectYear(year) {
+            currentYear = year;
+            // Aktif sınıfını güncelle
+            document.querySelectorAll('.timeline-year').forEach(el => {
+                el.classList.remove('active');
+                if (parseInt(el.dataset.year) === year) {
+                    el.classList.add('active');
+                }
+            });
+            displayEarthquakes(year);
+            updateMap(year); // Haritayı güncelle
+        }
+
+        // Deprem listesini göster
+        function displayEarthquakes(year) {
+            selectedYearTitle.textContent = year;
+            earthquakeList.innerHTML = ''; // Önceki içeriği temizle
+            const earthquakes = earthquakeData[year];
+
+            if (earthquakes && earthquakes.length > 0) {
+                earthquakes.forEach(eq => {
+                    const earthquakeItem = document.createElement('div');
+                    earthquakeItem.classList.add('earthquake-item');
+
+                    let magnitudeClass = '';
+                    if (eq.magnitude >= 7.0) {
+                        magnitudeClass = 'magnitude-large';
+                    } else if (eq.magnitude >= 5.0) {
+                        magnitudeClass = 'magnitude-medium';
+                    } else {
+                        magnitudeClass = 'magnitude-small';
+                    }
+
+                    earthquakeItem.innerHTML = `
+                        <strong>Tarih:</strong> ${eq.date}<br>
+                        <strong>Büyüklük:</strong> <span class="${magnitudeClass}">${eq.magnitude}</span><br>
+                        <strong>Merkez Üssü:</strong> ${eq.epicenter}<br>
+                        <strong>Can Kaybı/Hasar:</strong> ${eq.casualties}<br>
+                        <strong>Detaylar:</strong> ${eq.details}
+                    `;
+                    earthquakeList.appendChild(earthquakeItem);
+                });
+            } else {
+                earthquakeList.innerHTML = '<p>Bu yıl için önemli deprem bilgisi bulunmamaktadır.</p>';
+            }
+        }
+
+        // Haritayı güncelle
+        function updateMap(year) {
+            turkeyMap.innerHTML = ''; // Harita alanını temizle
+
+            const imageUrl = yearMapImages[year]; // Yıla özel resim URL'sini al
+
+            if (imageUrl) {
+                const imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                imgElement.alt = `${year} Yılı Türkiye Deprem Haritası`;
+                imgElement.classList.add('img-fluid'); // Bootstrap'in responsive resim sınıfı
+                turkeyMap.appendChild(imgElement);
+            } else {
+                // O yıl için resim yoksa alternatif bir mesaj göster
+                turkeyMap.innerHTML = `<p>Bu yıl için özel harita görseli bulunmamaktadır. (${year})</p>`;
+                turkeyMap.style.backgroundColor = '#e9ecef';
+                turkeyMap.style.color = '#6c757d';
+            }
+        }
+
+        // Sayfa yüklendiğinde
+        document.addEventListener('DOMContentLoaded', () => {
+            populateTimeline();
+            selectYear(currentYear); // Başlangıçta varsayılan yılı göster
+        });
+    </script>
+
+    
+</html>

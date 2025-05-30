@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kodinger">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kayıt Sayfası</title> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/my-login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <style>
+        /* Resim için stil (küçük ve yuvarlak) */
+        .brand img {
+            width: 80px; /* İstediğiniz küçük boyut */
+            height: 80px; /* İstediğiniz küçük boyut */
+            border-radius: 50%; /* Resmi yuvarlak yapar */
+            object-fit: cover; /* Resmin boyutlara sığmasını sağlar, kırpabilir */
+            margin-bottom: 15px; /* Altına biraz boşluk ekler */
+        }
+        /* TC Kimlik ve Telefon için spinner görünümünü iyileştirme */
+        .ui-spinner {
+            width: 100%; /* input ile aynı genişlik */
+            display: flex; /* Butonların yanyana gelmesi için */
+        }
+        .ui-spinner .ui-spinner-button {
+            width: 30px; /* Buton genişliği */
+            height: auto; /* Yüksekliği içeriğe göre ayarla */
+        }
+        .ui-spinner .ui-spinner-down {
+            margin-right: -1px; /* Butonlar arası boşluğu kapatır */
+        }
+    </style>
+</head>
+<body class="my-login-page">
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center align-items-center h-100"> <div class="card-wrapper">
+                    <div class="brand">
+                        <img src="assets/images/AAAAAAA.jpg" alt="Kayıt Sayfası Logosu"> </div>
+                    <div class="card fat">
+                        <div class="card-body">
+                            <h4 class="card-title">Kayıt Formu</h4>
+                            <form id="registerForm" method="POST" class="my-login-validation" novalidate=""> <div class="form-group">
+                                    <label for="firstName">Adı</label> <input id="firstName" type="text" class="form-control" name="firstName" required autofocus> <div class="invalid-feedback">
+                                        Adınız gerekli. </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName">Soyadı</label> <input id="lastName" type="text" class="form-control" name="lastName" required> <div class="invalid-feedback">
+                                        Soyadınız gerekli. </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">E-Posta Adresi</label>
+                                    <input id="email" type="email" class="form-control" name="email" required>
+                                    <div class="invalid-feedback">
+                                        Geçerli bir e-posta adresi giriniz. </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="address">Ev Adresi</label>
+                                    <input id="address" type="text" class="form-control" name="address" required>
+                                    <div class="invalid-feedback">
+                                        Ev adresiniz gerekli. </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city">Şehir</label>
+                                    <select class="form-control" id="city" name="city" required>
+                                        <option value="">Lütfen bir şehir seçin...</option>
+                                        <option value="Adana">Adana</option>
+                                        <option value="Adıyaman">Adıyaman</option>
+                                        <option value="Afyonkarahisar">Afyonkarahisar</option>
+                                        <option value="Ağrı">Ağrı</option>
+                                        <option value="Amasya">Amasya</option>
+                                        <option value="Ankara">Ankara</option>
+                                        <option value="Antalya">Antalya</option>
+                                        <option value="Artvin">Artvin</option>
+                                        <option value="Aydın">Aydın</option>
+                                        <option value="Balıkesir">Balıkesir</option>
+                                        <option value="Bilecik">Bilecik</option>
+                                        <option value="Bingöl">Bingöl</option>
+                                        <option value="Bitlis">Bitlis</option>
+                                        <option value="Bolu">Bolu</option>
+                                        <option value="Burdur">Burdur</option>
+                                        <option value="Bursa">Bursa</option>
+                                        <option value="Çanakkale">Çanakkale</option>
+                                        <option value="Çankırı">Çankırı</option>
+                                        <option value="Çorum">Çorum</option>
+                                        <option value="Denizli">Denizli</option>
+                                        <option value="Diyarbakır">Diyarbakır</option>
+                                        <option value="Edirne">Edirne</option>
+                                        <option value="Elazığ">Elazığ</option>
+                                        <option value="Erzincan">Erzincan</option>
+                                        <option value="Erzurum">Erzurum</option>
+                                        <option value="Eskişehir">Eskişehir</option>
+                                        <option value="Gaziantep">Gaziantep</option>
+                                        <option value="Giresun">Giresun</option>
+                                        <option value="Gümüşhane">Gümüşhane</option>
+                                        <option value="Hakkari">Hakkari</option>
+                                        <option value="Hatay">Hatay</option>
+                                        <option value="Isparta">Isparta</option>
+                                        <option value="Mersin">Mersin</option>
+                                        <option value="İstanbul">İstanbul</option>
+                                        <option value="İzmir">İzmir</option>
+                                        <option value="Kars">Kars</option>
+                                        <option value="Kastamonu">Kastamonu</option>
+                                        <option value="Kayseri">Kayseri</option>
+                                        <option value="Kırklareli">Kırklareli</option>
+                                        <option value="Kırşehir">Kırşehir</option>
+                                        <option value="Kocaeli">Kocaeli</option>
+                                        <option value="Konya">Konya</option>
+                                        <option value="Kütahya">Kütahya</option>
+                                        <option value="Malatya">Malatya</option>
+                                        <option value="Manisa">Manisa</option>
+                                        <option value="Kahramanmaraş">Kahramanmaraş</option>
+                                        <option value="Mardin">Mardin</option>
+                                        <option value="Muğla">Muğla</option>
+                                        <option value="Muş">Muş</option>
+                                        <option value="Nevşehir">Nevşehir</Nevşehir>
+                                        <option value="Niğde">Niğde</option>
+                                        <option value="Ordu">Ordu</option>
+                                        <option value="Rize">Rize</option>
+                                        <option value="Sakarya">Sakarya</option>
+                                        <option value="Samsun">Samsun</option>
+                                        <option value="Siirt">Siirt</option>
+                                        <option value="Sinop">Sinop</option>
+                                        <option value="Sivas">Sivas</option>
+                                        <option value="Tekirdağ">Tekirdağ</option>
+                                        <option value="Tokat">Tokat</option>
+                                        <option value="Trabzon">Trabzon</option>
+                                        <option value="Tunceli">Tunceli</option>
+                                        <option value="Şanlıurfa">Şanlıurfa</option>
+                                        <option value="Uşak">Uşak</option>
+                                        <option value="Van">Van</option>
+                                        <option value="Yozgat">Yozgat</option>
+                                        <option value="Zonguldak">Zonguldak</option>
+                                        <option value="Aksaray">Aksaray</option>
+                                        <option value="Bayburt">Bayburt</option>
+                                        <option value="Karaman">Karaman</option>
+                                        <option value="Kırıkkale">Kırıkkale</option>
+                                        <option value="Batman">Batman</option>
+                                        <option value="Şırnak">Şırnak</option>
+                                        <option value="Bartın">Bartın</Bartın>
+                                        <option value="Ardahan">Ardahan</option>
+                                        <option value="Iğdır">Iğdır</Iğdır>
+                                        <option value="Yalova">Yalova</Yalova>
+                                        <option value="Karabük">Karabük</Karabük>
+                                        <option value="Kilis">Kilis</Kilis>
+                                        <option value="Osmaniye">Osmaniye</Osmaniye>
+                                        <option value="Düzce">Düzce</Düzce>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Lütfen bir şehir seçiniz.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber">Telefon Numarası</label> <input id="phoneNumber" type="text" class="form-control" name="phoneNumber" required min="0"> <div class="invalid-feedback">
+                                        Telefon numaranız gerekli. </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tcKimlik">TC Kimlik No</label> <input id="tcKimlik" type="text" class="form-control" name="tcKimlik" required min="0"> <div class="invalid-feedback">
+                                        TC Kimlik numaranız gerekli. </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Parola giriniz</label> <input id="password" type="password" class="form-control" name="password" required data-eye>
+                                    <div class="invalid-feedback">
+                                        Parola gerekli. </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="passwordConfirm">Parolayı tekrar giriniz</label> <input id="passwordConfirm" type="password" class="form-control" name="passwordConfirm" required data-eye> <div class="invalid-feedback">
+                                        Parola onayı gerekli. </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="custom-checkbox custom-control">
+                                        <input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
+                                        <label for="agree" class="custom-control-label">Kullanım koşullarını <a href="#">kabul ediyorum</a></label>
+                                        <div class="invalid-feedback">
+                                            Kullanım koşullarını kabul etmelisiniz. </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-0">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Kayıt Ol
+                                    </button>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    Zaten hesabınız var ise <a href="index.html">Giriş</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        Copyright &copy; 2017 &mdash; Your Company
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="js/my-login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Telefon ve TC Kimlik No alanlarını spinner'a dönüştür
+            // type="text" olduğu için spinner'lar input'un yanına button olarak eklenecek
+            $("#phoneNumber").spinner({
+                min: 0,
+                step: 1
+            });
+            $("#tcKimlik").spinner({
+                min: 0,
+                step: 1
+            });
+
+            // TC Kimlik No için uzunluk kontrolü ve sadece sayı girişi
+            $('#tcKimlik').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '').substring(0, 11);
+            });
+            // Telefon Numarası için sadece sayı girişi
+            $('#phoneNumber').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+
+            // Form gönderimini ele alma (SweetAlert bildirimleri için)
+            const registerForm = document.getElementById('registerForm'); // ID düzeltildi
+            registerForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Formun varsayılan gönderimini engelle
+
+                // Form validasyonunu kontrol et
+                if (registerForm.checkValidity() === false) {
+                    event.stopPropagation();
+                    registerForm.classList.add('was-validated'); // Bootstrap'in validasyon mesajlarını gösterir
+                    Swal.fire({
+                        icon: "warning",
+                        title: "Eksik/Hatalı Bilgi!",
+                        text: "Lütfen tüm gerekli alanları doğru şekilde doldurunuz.",
+                        draggable: true,
+                        confirmButtonText: "Tamam"
+                    });
+                    return; // Eğer form geçerli değilse işlemi durdur
+                }
+
+                // Burada gerçek bir kayıt işlemi (AJAX isteği vb.) yapılmalı.
+                // Şimdilik, başarılı veya hatalı bir yanıtı simüle edelim.
+                const isRegistrationSuccessful = Math.random() > 0.5; // %50 başarı, %50 hata simülasyonu
+
+                if (isRegistrationSuccessful) {
+                    Swal.fire({
+                        title: "Kayıt Oldunuz!",
+                        text: "Hesabınız başarıyla oluşturuldu.",
+                        icon: "success",
+                        draggable: true,
+                        confirmButtonText: "Tamam"
+                    }).then(() => {
+                        // Kullanıcı "Tamam" dediğinde veya uyarı kapandığında yönlendirme yapabilirsiniz
+                        window.location.href = 'index.html'; // Giriş sayfasına yönlendir
+                    });
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Kayıt Başarısız!",
+                        text: "Kayıt işlemi gerçekleşmedi. Lütfen bilgilerinizi kontrol edin veya daha sonra tekrar deneyin.",
+                        draggable: true,
+                        confirmButtonText: "Tekrar Dene"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Risk Puan Çıktısı - Merak ettiğiniz şehrin risk seviyesini gösterir.</title>
+
+  <link href="./main.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header fixed-footer">
+    <div class="app-header header-shadow">
+      <div class="app-header__logo">
+        <div class="logo-src"></div>
+        <div class="header__pane ml-auto">
+          <div>
+            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-header__mobile-menu">
+        <div>
+          <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="app-header__menu">
+        <span>
+          <button type="button" class="btn-icon btn-icon-only btn btn-info btn-sm mobile-toggle-header-nav">
+            <span class="btn-icon-wrapper">
+              <i class="fa fa-ellipsis-v fa-w-6"></i>
+            </span>
+          </button>
+        </span>
+      </div>
+
+      <div class="app-header__content">
+        <div class="app-header-left">
+          <div class="search-wrapper">
+            <div class="input-holder">
+              <input type="text" class="search-input" placeholder="Type to search">
+              <button class="search-icon"><span></span></button>
+            </div>
+            <button class="close"></button>
+          </div>
+          <ul class="header-menu nav">
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-database"> </i>
+                İstatislikler
+              </a>
+            </li>
+            <li class="btn-group nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-edit"></i>
+                Proje Yapıları
+              </a>
+            </li>
+            <li class="dropdown nav-item">
+              <a href="javascript:void(0);" class="nav-link">
+                <i class="nav-link-icon fa fa-cog"></i>
+                Ayarlar
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="app-header-right">
+          <div class="header-btn-lg pr-0">
+            <div class="widget-content p-0">
+              <div class="widget-content-wrapper">
+                <div class="widget-content-left">
+                  <div class="btn-group">
+                    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                      <img width="42" class="rounded-circle" src="https://i.pinimg.com/736x/53/c8/f4/53c8f464c1aab5a4b66c7c2164936e66.jpg" alt="">
+                      <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                    </a>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                      <button type="button" tabindex="0" class="dropdown-item">Kullanıcı Hesabı</button>
+                      <button type="button" tabindex="0" class="dropdown-item">Ayarlar</button>
+                      <h6 tabindex="-1" class="dropdown-header">Header</h6>
+                      <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                      <div tabindex="-1" class="dropdown-divider"></div>
+                      <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget-content-left  ml-3 header-user-info">
+                  <div class="widget-heading">
+                    Giriş
+                  </div>
+                </div>
+                <div class="widget-content-right header-user-info ml-3">
+                  <button type="button" class="btn-shadow p-1 btn btn-info btn-sm show-toastr-example">
+                    <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-main">
+      <div class="app-sidebar sidebar-shadow">
+        <div class="app-header__logo">
+          <div class="logo-src"></div>
+          <div class="header__pane ml-auto">
+            <div>
+              <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="app-header__mobile-menu">
+          <div>
+            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="app-header__menu">
+          <span>
+            <button type="button" class="btn-icon btn-icon-only btn btn-info btn-sm mobile-toggle-header-nav">
+              <span class="btn-icon-wrapper">
+                <i class="fa fa-ellipsis-v fa-w-6"></i>
+              </span>
+            </button>
+          </span>
+        </div>
+        <div class="scrollbar-sidebar">
+          <div class="app-sidebar__inner">
+            <ul class="vertical-nav-menu">
+              <li class="app-sidebar__heading">Ana Panel</li>
+              <li>
+                <a href="anasayfa.html" class="mm-active">
+                  <i class="metismenu-icon pe-7s-rocket"></i>
+                  Güncel Haberler
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Risk Verileri</li>
+              
+              
+              <li>
+                <a href="tables-regular.html">
+                  <i class="metismenu-icon pe-7s-display2"></i>
+                  Kritik Yapılar Listesi
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Harita Görünümü</li>
+              <li>
+                <a href="dashboard-boxes.html">
+                  <i class="metismenu-icon pe-7s-display2"></i>
+                  Şehir Bazlı Görüntüleme
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Raporlar</li>
+              <li>
+                <a href="forms-controls.html">
+                  <i class="metismenu-icon pe-7s-mouse">
+                  </i>Yıllık Özet
+                </a>
+              </li>
+              <li>
+                <a href="forms-layouts.html">
+                  <i class="metismenu-icon pe-7s-eyedropper">
+                  </i>Risk puanı çıktısı
+                </a>
+              </li>
+              
+              <li class="app-sidebar__heading">Deprem Grafikleri</li>
+              <li>
+                <a href="charts-chartjs.html">
+                  <i class="metismenu-icon pe-7s-graph2">
+                  </i>Grafikler
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="app-main__outer">
+        <div class="app-main__inner">
+          <div class="app-page-title">
+            <div class="page-title-wrapper">
+              <div class="page-title-heading">
+                <div class="page-title-icon">
+                  <i class="pe-7s-graph text-success">
+                  </i>
+                </div>
+                <div>Risk Puan Çıktısı
+                  <div class="page-title-subheading">Merak ettiğiniz şehrin risk seviyesini gösterir.
+                  </div>
+                </div>
+              </div>
+              <div class="page-title-actions">
+                <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom"
+                  class="btn-shadow mr-3 btn btn-focus">
+                  <i class="fa fa-star"></i>
+                </button>
+                <div class="d-inline-block dropdown">
+                  <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    class="btn-shadow dropdown-toggle btn btn-info">
+                    <span class="btn-icon-wrapper pr-2 opacity-7">
+                      <i class="fa fa-business-time fa-w-20"></i>
+                    </span>
+                    Buttons
+                  </button>
+                  <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-inbox"></i>
+                          <span>
+                            Inbox
+                          </span>
+                          <div class="ml-auto badge badge-pill badge-secondary">86</div>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-book"></i>
+                          <span>
+                            Book
+                          </span>
+                          <div class="ml-auto badge badge-pill badge-danger">5</div>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">
+                          <i class="nav-link-icon lnr-picture"></i>
+                          <span>
+                            Picture
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a disabled href="javascript:void(0);" class="nav-link disabled">
+                          <i class="nav-link-icon lnr-file-empty"></i>
+                          <span>
+                            File Disabled
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehre Göre Deprem Riski</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .card-header {
+            background-color: #1b3652;
+            color: white;
+            font-weight: bold;
+        }
+        .risk-query-section {
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+        .risk-result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: none; /* Başlangıçta gizli */
+        }
+        .risk-high {
+            background-color: #f8d7da; /* Kırmızımsı */
+            color: #721c24;
+            border-color: #f5c6cb;
+        }
+        .risk-medium {
+            background-color: #fff3cd; /* Sarımsı */
+            color: #856404;
+            border-color: #ffeeba;
+        }
+        .risk-low {
+            background-color: #d4edda; /* Yeşilimsi */
+            color: #155724;
+            border-color: #c3e6cb;
+        }
+        .risk-unknown {
+            background-color: #e2e3e5; /* Grimsi */
+            color: #383d41;
+            border-color: #d6d8db;
+        }
+        .alert-info-custom {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container main-content">
+        <div class="card">
+            <div class="card-header">
+                Şehre Göre Deprem Riski Sorgulama
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Türkiye'deki şehirlerin genel deprem risk seviyesini öğrenmek için aşağıdaki arama kutusunu kullanabilirsiniz.
+                    Lütfen bir şehir adı girin.
+                </p>
+
+                <div class="risk-query-section">
+                    <div class="form-group">
+                        <label for="cityInput">Şehir Adı:</label>
+                        <input type="text" class="form-control" id="cityInput" placeholder="Örn: İstanbul, İzmir, Ankara">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="queryRiskBtn">Deprem Riski Sorgula</button>
+
+                    <div class="risk-result" id="riskResult">
+                        </div>
+
+                    <p class="alert-info-custom">
+                        **Önemli Not:** Burada sunulan bilgiler, basit bir örnek veri seti üzerinden genel bir risk seviyesini belirtir.
+                        Gerçek ve detaylı deprem risk değerlendirmesi için resmi kurumların (AFAD, belediyeler, üniversiteler) güncel verilerine başvurmanız ve uzman görüşü almanız zorunludur.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Örnek Deprem Riski Verileri (Gerçek bir uygulamada bir API'den veya veritabanından alınmalıdır)
+        const cityRiskData = {
+            "istanbul": { level: "Yüksek", description: "Marmara Bölgesi'nde, aktif fay hatlarına yakınlığı ve yüksek nüfus yoğunluğu nedeniyle yüksek deprem riski taşımaktadır." },
+            "izmir": { level: "Yüksek", description: "Ege Bölgesi'nde aktif fay hatları üzerinde yer almakta ve önemli deprem riski bulunmaktadır." },
+            "ankara": { level: "Orta", description: "Genel olarak orta düzeyde deprem riski taşımaktadır. Ancak bazı bölgelerde yerel fay hatları veya zemin koşulları riski artırabilir." },
+            "kocaeli": { level: "Yüksek", description: "1999 depreminin merkez üssü olan bu il, aktif Kuzey Anadolu Fay Hattı'nın üzerinde yer almaktadır." },
+            "bursa": { level: "Yüksek", description: "Marmara Bölgesi'nde, aktif fay hatlarına yakınlığı nedeniyle yüksek deprem riski taşımaktadır." },
+            "gaziantep": { level: "Yüksek", description: "Doğu Anadolu Fay Hattı'na yakınlığı nedeniyle yüksek deprem riski taşımaktadır." },
+            "kahramanmaraş": { level: "Yüksek", description: "Doğu Anadolu Fay Hattı üzerinde yer almakta ve çok yüksek deprem riski taşımaktadır." },
+            "hatay": { level: "Yüksek", description: "Önemli fay hatlarının geçtiği bir bölgede yer almakta ve çok yüksek deprem riski taşımaktadır." },
+            "adana": { level: "Orta", description: "Çevresindeki fay hatları nedeniyle orta düzeyde deprem riski taşımaktadır." },
+            "eskisehir": { level: "Orta", description: "Genel olarak orta düzeyde deprem riski taşımaktadır." },
+            "antalya": { level: "Düşük", description: "Genel olarak düşük deprem riski taşımaktadır, ancak Fethiye-Burdur fay hattına yakın bölgelerde risk artabilir." },
+            "trabzon": { level: "Düşük", description: "Karadeniz kıyısında, genel olarak düşük deprem riski taşımaktadır." },
+            "samsun": { level: "Düşük", description: "Karadeniz kıyısında, genel olarak düşük deprem riski taşımaktadır." },
+            "konya": { level: "Düşük", description: "İç Anadolu'da, genel olarak düşük deprem riski taşımaktadır." },
+            "edirne": { level: "Düşük", description: "Trakya Bölgesi'nde, genel olarak düşük deprem riski taşımaktadır." },
+            // Diğer şehirler için benzer veriler ekleyebilirsiniz
+        };
+
+        const cityInput = document.getElementById('cityInput');
+        const queryRiskBtn = document.getElementById('queryRiskBtn');
+        const riskResult = document.getElementById('riskResult');
+
+        queryRiskBtn.addEventListener('click', () => {
+            const cityName = cityInput.value.trim().toLowerCase(); // Kullanıcının girdiği şehir adı
+            let riskInfo = cityRiskData[cityName];
+
+            riskResult.innerHTML = ''; // Önceki sonucu temizle
+            riskResult.style.display = 'block'; // Sonuç alanını göster
+
+            if (riskInfo) {
+                let riskClass = '';
+                if (riskInfo.level === "Yüksek") {
+                    riskClass = 'risk-high';
+                } else if (riskInfo.level === "Orta") {
+                    riskClass = 'risk-medium';
+                } else { // Düşük
+                    riskClass = 'risk-low';
+                }
+                riskResult.className = `risk-result ${riskClass}`; // Sınıfı dinamik olarak ata
+                riskResult.innerHTML = `
+                    <p><strong>${capitalizeFirstLetter(cityName)} Şehrinin Deprem Riski:</strong> <span class="badge badge-pill badge-${riskClass.split('-')[1]}">${riskInfo.level}</span></p>
+                    <p>${riskInfo.description}</p>
+                `;
+            } else {
+                riskResult.className = 'risk-result risk-unknown';
+                riskResult.innerHTML = `
+                    <p><strong>"${capitalizeFirstLetter(cityName)}"</strong> şehri için risk bilgisi bulunamadı veya hatalı giriş yaptınız.</p>
+                    <p>Lütfen şehir adını doğru yazdığınızdan emin olun.</p>
+                `;
+            }
+        });
+
+        // Şehir adının ilk harfini büyük yapmak için yardımcı fonksiyon
+        function capitalizeFirstLetter(string) {
+            if (!string) return '';
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    </script>
+</body>
+
+</html>
